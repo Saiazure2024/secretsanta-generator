@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools{
-        jdk 'jdk17'
+        jdk 'jdk21'
         maven 'maven3'
     }
     environment{
@@ -9,11 +9,6 @@ pipeline {
     }
 
     stages {
-        stage('git-checkout') {
-            steps {
-                git 'https://github.com/jaiswaladi246/secretsanta-generator.git'
-            }
-        }
 
         stage('Code-Compile') {
             steps {
